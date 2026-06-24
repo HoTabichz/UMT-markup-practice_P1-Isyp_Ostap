@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora</title>
+
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
+
+    <link
+            href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+</head>
+
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <use href="./images/icons.svg"></use>
+</svg>
+
+<header class="header">
+    <div class="container">
+        <nav class="nav">
+            <a href="./index.html" class="logo">
+                <img src="./images/logof.png" alt="Flora logo" width="120" />
+            </a>
+
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#bestsellers">Bestsellers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#bouquets">Bouquets</a></li>
+                <li class="nav-item"><a class="nav-link" href="#reviews">Feedback</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacts">Contacts</a></li>
+            </ul>
+
+            <button type="button" class="header-btn">Explore Bouquets</button>
+
+            <button type="button" class="menu-open-btn" aria-label="Open mobile menu">
+                <svg width="24" height="24" aria-hidden="true">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- HERO -->
+    <section class="hero section">
+        <img
+                class="hero-bg-image"
+                src="./images/hero.png"
+                alt="Beautiful bouquet of pink and white flowers"
+                width="1440"
+        />
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-left">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            Brighten Your Day with Our Stunning Bouquets
+                        </h1>
+                        <p class="hero-text">
+                            At Flora, we believe that every occasion deserves a beautiful bouquet. Our expertly crafted arrangements are designed to bring joy and elegance to your celebrations.
+                        </p>
+                    </div>
+                    <button type="button" class="hero-btn">
+                        Explore Our Bestsellers
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-content" data-aos="fade-right" data-aos-duration="700">
+                    <img src="./images/flowerl.png" alt="" class="about-flower" aria-hidden="true" width="64" />
+                    <h2 class="section-title">Our Passion for Floral Artistry</h2>
+                    <p class="about-text">
+                        At Flora, we believe that every bouquet tells a story. Our team meticulously crafts each arrangement, blending creativity with the freshest blooms to create stunning pieces for every occasion.
+                    </p>
+                </div>
+                <img
+                        class="about-image"
+                        src="./images/2.png"
+                        alt="Florist working with flowers"
+                        width="536"
+                        data-aos="fade-left"
+                        data-aos-duration="700"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- TOP-SELLING -->
+    <section class="products section" id="bestsellers">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Top-Selling Bouquets</h2>
+            <ul class="products-list">
+                <!-- dynamic via axios / main.js -->
+            </ul>
+
+            <div class="products-dots">
+                <button class="products-dot active" aria-label="Slide 1"></button>
+                <button class="products-dot" aria-label="Slide 2"></button>
+                <button class="products-dot" aria-label="Slide 3"></button>
+                <button class="products-dot" aria-label="Slide 4"></button>
+                <button class="products-dot" aria-label="Slide 5"></button>
+                <button class="products-dot" aria-label="Slide 6"></button>
+            </div>
+
+            <div class="products-controls">
+                <button type="button" class="products-btn" aria-label="Previous">
+                    <svg width="24" height="24" aria-hidden="true">
+                        <use href="./images/icons.svg#icon-arrow-left"></use>
+                    </svg>
+                </button>
+                <button type="button" class="products-btn" aria-label="Next">
+                    <svg width="24" height="24" aria-hidden="true">
+                        <use href="./images/icons.svg#icon-arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOUQUETS -->
+    <section class="bouquets section" id="bouquets">
+        <div class="container">
+            <h2 class="section-title bouquets-section-title" data-aos="fade-up">Bouquets</h2>
+            <p class="bouquets-section-text" data-aos="fade-up" data-aos-delay="100">
+                Explore our stunning selection of fresh flower bouquets.
+            </p>
+            <ul class="bouquets-list">
+                <!-- dynamic via axios / main.js -->
+            </ul>
+            <button type="button" class="bouquets-btn">Show More</button>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews section" id="reviews">
+        <div class="container">
+            <h2 class="section-title reviews-title" data-aos="fade-up">What Our Clients Say</h2>
+            <div class="reviews-content">
+                <ul class="reviews-list">
+                    <!-- dynamic via modal.js -->
+                </ul>
+                <div class="reviews-controls">
+                    <button type="button" class="reviews-btn" aria-label="Previous review">
+                        <svg width="24" height="24" aria-hidden="true">
+                            <use href="./images/icons.svg#icon-arrow-left"></use>
+                        </svg>
+                    </button>
+                    <button type="button" class="reviews-btn" aria-label="Next review">
+                        <svg width="24" height="24" aria-hidden="true">
+                            <use href="./images/icons.svg#icon-arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contacts">
+        <div class="container">
+            <p class="contact-label" data-aos="fade-up">Connect</p>
+            <div class="contact-top" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-left">
+                    <h2 class="section-title contact-title">Get in Touch</h2>
+                    <p class="contact-desc">We're here to assist you with all your floral needs and inquiries.</p>
+                </div>
+                <ul class="contact-info-list">
+                    <li class="contact-info-item">
+                        <svg class="contact-info-icon" width="24" height="24" aria-label="Phone">
+                            <use href="./images/icons.svg#icon-phone"></use>
+                        </svg>
+                        <div class="contact-info-body">
+                            <span class="contact-info-title">Phone</span>
+                            <a class="contact-link contact-link--underline" href="tel:+15551234567">+1 (555) 123-4567</a>
+                        </div>
+                    </li>
+                    <li class="contact-info-item">
+                        <svg class="contact-info-icon" width="24" height="24" aria-label="Store">
+                            <use href="./images/icons.svg#icon-location"></use>
+                        </svg>
+                        <div class="contact-info-body">
+                            <span class="contact-info-title">Store</span>
+                            <a class="contact-link" href="https://maps.google.com/?q=456+Floral+Ave,+Sydney+NSW+2000+AU" target="_blank" rel="noopener noreferrer">
+                                456 Floral Ave, Sydney NSW 2000 AU
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <img class="contact-image" src="./images/florist.png" alt="Florist holding bouquet in flower shop" width="1280" />
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-container">
+        <a href="./index.html" class="footer-logo">
+            <img src="./images/logoff.png" alt="Flora logo" class="footer-logo-img" />
+        </a>
+        <div class="footer-nav" aria-label="Footer navigation">
+            <ul class="footer-nav-list">
+                <li><a class="footer-nav-link" href="#about">About Us</a></li>
+                <li><a class="footer-nav-link" href="#bestsellers">Bestsellers</a></li>
+                <li><a class="footer-nav-link" href="#bouquets">Bouquets</a></li>
+                <li><a class="footer-nav-link" href="#reviews">Feedback</a></li>
+                <li><a class="footer-nav-link" href="#contacts">Contacts</a></li>
+            </ul>
+        </div>
+        <ul class="footer-social-list">
+            <li>
+                <a class="footer-social-link" href="#" aria-label="Facebook">
+                    <img src="./images/f.png" alt="Facebook icon" width="24" height="24" />
+                </a>
+            </li>
+            <li>
+                <a class="footer-social-link" href="#" aria-label="Instagram">
+                    <img src="./images/in.png" alt="Instagram icon" width="24" height="24" />
+                </a>
+            </li>
+            <li>
+                <a class="footer-social-link" href="#" aria-label="Twitter">
+                    <img src="./images/x-twitter.png" alt="Twitter icon" width="24" height="24" />
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="footer-copy">© 2025 Flora. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu">
+    <div class="mobile-menu-container">
+        <div class="mobile-menu-header">
+            <a href="./index.html" class="mobile-menu-logo">
+                <img src="./images/logof.png" alt="Flora logo" width="120" />
+            </a>
+            <button type="button" class="mobile-menu-close-btn" aria-label="Close mobile menu">
+                <svg width="24" height="24" aria-hidden="true">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-item"><a class="mobile-menu-link" href="#about">About Us</a></li>
+            <li class="mobile-menu-item"><a class="mobile-menu-link" href="#bestsellers">Bestsellers</a></li>
+            <li class="mobile-menu-item"><a class="mobile-menu-link" href="#bouquets">Bouquets</a></li>
+            <li class="mobile-menu-item"><a class="mobile-menu-link" href="#reviews">Feedback</a></li>
+            <li class="mobile-menu-item"><a class="mobile-menu-link" href="#contacts">Contacts</a></li>
+        </ul>
+        <a href="#bouquets" class="mobile-menu-btn">Explore Bouquets</a>
+    </div>
+</div>
+
+<!-- PRODUCT DETAILS MODAL -->
+<div class="modal-overlay" id="productModal">
+    <div class="modal modal--product">
+        <button type="button" class="modal-close" id="productModalClose" aria-label="Close modal">
+            <svg width="24" height="24" aria-hidden="true">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        <div class="product-modal-body">
+            <img class="product-modal-image" id="productModalImage" src="" alt="" />
+            <div class="product-modal-info">
+                <h2 class="product-modal-title" id="productModalTitle"></h2>
+                <p class="product-modal-price" id="productModalPrice"></p>
+                <p class="product-modal-desc" id="productModalDesc"></p>
+                <div class="product-modal-actions">
+                    <button type="button" class="product-modal-buy" id="productModalBuy">Buy now</button>
+                    <input class="product-modal-qty" type="number" value="1" min="1" max="99" aria-label="Quantity" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ORDER MODAL -->
+<div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+    <div class="modal">
+        <button type="button" class="modal-close" id="modalClose" aria-label="Close modal">
+            <svg width="24" height="24" aria-hidden="true">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        <h2 class="modal-title" id="orderModalTitle">Order</h2>
+        <form class="modal-form" id="orderForm" novalidate>
+            <div class="modal-field">
+                <label class="modal-label" for="orderName">Name*</label>
+                <input class="modal-input modal-input--simple" type="text" id="orderName" name="name" placeholder="Ann" required autocomplete="given-name" />
+            </div>
+            <div class="modal-field">
+                <label class="modal-label" for="orderPhone">Phone*</label>
+                <input class="modal-input modal-input--simple" type="tel" id="orderPhone" name="phone" placeholder="+1 (555) 123-4567" required autocomplete="tel" />
+            </div>
+            <div class="modal-field">
+                <label class="modal-label" for="orderAddress">Address*</label>
+                <input class="modal-input modal-input--simple" type="text" id="orderAddress" name="address" placeholder="456 Floral Ave, Sydney NSW 2000 AU" required autocomplete="street-address" />
+            </div>
+            <div class="modal-field">
+                <label class="modal-label" for="orderMessage">Message</label>
+                <textarea class="modal-textarea modal-textarea--simple" id="orderMessage" name="message" placeholder="Type your message..."></textarea>
+            </div>
+            <button type="submit" class="modal-submit">Go to Checkout</button>
+        </form>
+    </div>
+</div>
+
+<button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="scroll-top-bg" d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z" fill="white"/>
+        <path d="M24 0.5C36.9787 0.5 47.5 11.0213 47.5 24C47.5 36.9787 36.9787 47.5 24 47.5C11.0213 47.5 0.5 36.9787 0.5 24C0.5 11.0213 11.0213 0.5 24 0.5Z" stroke="#030C01" stroke-opacity="0.15"/>
+        <path d="M30 25.414L31.414 24L24.707 17.293L18 24L19.414 25.414L23.707 21.121V30.707H25.707V21.121L30 25.414Z" fill="#030C01"/>
+    </svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="./js/modal.js"></script>
+<script src="./js/main.js"></script>
+<script>
+    AOS.init({
+      duration: 600,
+      easing: 'ease-out',
+      once: true,
+      offset: 80,
+    });
+</script>
+
+</body>
+</html>

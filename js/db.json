@@ -1,0 +1,774 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Midnight Garden",
+      "description": "A spellbinding bouquet of indigo delphiniums, silvery moonlit eucalyptus, and deep violet lisianthus. This enchanting arrangement evokes the mysterious beauty of a midnight garden under starlit skies.",
+      "price": 98,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120786.png",
+      "alt": "Midnight Garden bouquet"
+    },
+    {
+      "id": 2,
+      "title": "Sunlit Italian Meadow",
+      "description": "Capture the golden warmth of Tuscany with a radiant bouquet of sunny chamomile, vivid wild poppies, blue cornflowers, and fragrant sprigs of Italian greenery. A breath of countryside bliss.",
+      "price": 62,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120787.png",
+      "alt": "Sunlit Italian Meadow bouquet"
+    },
+    {
+      "id": 3,
+      "title": "Velvet Twilight",
+      "description": "A sumptuous nocturne of velvety burgundy peonies, plum dahlias, and soft blue thistle, artfully woven with dusky foliage. This bouquet evokes the allure and mystery of evening's embrace.",
+      "price": 98,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120788.png",
+      "alt": "Velvet Twilight bouquet"
+    },
+    {
+      "id": 4,
+      "title": "Retro Mod Bouquet",
+      "description": "A bold celebration of pop-art style, this bouquet features vibrant dahlias, striking graphic mums, and playful accents in electric pink, citrus orange, and lemon yellow. The ultimate statement piece.",
+      "price": 88,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120802.png",
+      "alt": "Retro Mod Bouquet bouquet"
+    },
+    {
+      "id": 5,
+      "title": "Firelight Embrace",
+      "description": "Rich wine-hued peonies and smoldering copper foliage unite in this luxurious bouquet, echoing the golden glow and warmth of a firelit evening. Bold, romantic, utterly captivating.",
+      "price": 102,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120803.png",
+      "alt": "Firelight Embrace bouquet"
+    },
+    {
+      "id": 6,
+      "title": "Stained Glass Spectrum",
+      "description": "A dazzling display of vivid color blocks featuring radiant tulips, electric blue delphiniums, golden ranunculus, and bold magenta orchids—this bouquet evokes the mesmerizing artistry of stained glass windows.",
+      "price": 110,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120809.png",
+      "alt": "Stained Glass Spectrum bouquet"
+    },
+    {
+      "id": 7,
+      "title": "Painter's Muse",
+      "description": "A vivid masterpiece of lush coral peonies, striking teal-tinted hydrangeas, and golden yellow ranunculus. Designed to ignite creativity, this bouquet brings the artist's palette to life.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120810.png",
+      "alt": "Painter's Muse bouquet"
+    },
+    {
+      "id": 8,
+      "title": "Driftwood Daydream",
+      "description": "Sculptural driftwood branches intertwine with pristine white anemones and silvery eucalyptus, creating a mesmerizing homage to coastal elegance and the natural beauty of wind-swept shores.",
+      "price": 89,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120816.png",
+      "alt": "Driftwood Daydream bouquet"
+    },
+    {
+      "id": 9,
+      "title": "Frida Kahlo Riot",
+      "description": "A vibrant explosion of hot pink peonies, exotic anthurium, striking fuchsia orchids, and lush tropical greens—this bouquet channels Frida's fearless artistry and unapologetic color. Unleash your inner icon.",
+      "price": 110,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120817.png",
+      "alt": "Frida Kahlo Riot bouquet"
+    },
+    {
+      "id": 10,
+      "title": "Surrealist Dream",
+      "description": "A whimsical bouquet where sculptural protea, twisting calla lilies, and playful billy balls are paired with fluttering orchids and artful succulents—evoking a dreamscape of fanciful, unexpected beauty.",
+      "price": 105,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120823.png",
+      "alt": "Surrealist Dream bouquet"
+    },
+    {
+      "id": 11,
+      "title": "Magpie's Hoard",
+      "description": "Gleaming silver brunia, gilded eucalyptus, and iridescent anthurium petals mingle with midnight calla lilies—an opulent bouquet echoing a magpie's love of luminous, rare treasures.",
+      "price": 110,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120824.png",
+      "alt": "Magpie's Hoard bouquet"
+    },
+    {
+      "id": 12,
+      "title": "Noble Simplicity",
+      "description": "A striking interplay of bare dogwood branches and one exquisitely chosen white peony, celebrating restraint and elegant minimalism. Perfect for those who find beauty in purity and intention.",
+      "price": 70,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120830.png",
+      "alt": "Noble Simplicity bouquet"
+    },
+    {
+      "id": 13,
+      "title": "Tiger Lily Fever",
+      "description": "A bold explosion of vibrant orange tiger lilies ignites against dramatic black fern fronds, creating a striking and adventurous bouquet for those craving unapologetic color and modern edge.",
+      "price": 89,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120831.png",
+      "alt": "Tiger Lily Fever bouquet"
+    },
+    {
+      "id": 14,
+      "title": "Dreamy Lullaby",
+      "description": "A serene composition of airy pale blue delphinium, silvery brunia, and white lisianthus evokes the tranquility of moonlit dreams—a gentle, soothing bouquet perfect for moments of calm.",
+      "price": 78,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120837.png",
+      "alt": "Dreamy Lullaby bouquet"
+    },
+    {
+      "id": 15,
+      "title": "Glacial Stillness",
+      "description": "A serene bouquet of pure white peonies, icy blue thistles, snow-hued orchids, and silvery dusty miller evokes the tranquil beauty of a frozen landscape. Immaculate, minimalist, unforgettable.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120838.png",
+      "alt": "Glacial Stillness bouquet"
+    },
+    {
+      "id": 16,
+      "title": "Ethereal Fog",
+      "description": "A misty arrangement of white ranunculus, silvery dusty miller, pale eucalyptus, and soft green hellebores evokes the tranquility of dawn shrouded in gentle fog. Sublime and elegant.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120844.png",
+      "alt": "Ethereal Fog bouquet"
+    },
+    {
+      "id": 17,
+      "title": "Art Deco Geometry",
+      "description": "An opulent arrangement inspired by art deco elegance, featuring sculptural gold-tipped calla lilies, crisp white orchids, and greenery arranged in striking geometric patterns. A statement of timeless luxury.",
+      "price": 115,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120845.png",
+      "alt": "Art Deco Geometry bouquet"
+    },
+    {
+      "id": 18,
+      "title": "Frosted Evergreen",
+      "description": "Inspired by winter's hush, this bouquet blends lush, frosted evergreens, soft snowy cotton bolls, and shimmering silver brunia for an elegant, wintry embrace—sophisticated and serene.",
+      "price": 88,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120850.png",
+      "alt": "Frosted Evergreen bouquet"
+    }
+  ],
+  "bouquets": [
+    {
+      "id": 1,
+      "title": "Urban Jungle",
+      "description": "A striking collision of glossy monstera leaves and neon pink protea, accented with fresh orchids and vibrant bromeliads. This bold bouquet radiates modern city energy and tropical intensity.",
+      "price": 98,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120789.png",
+      "alt": "Urban Jungle bouquet"
+    },
+    {
+      "id": 2,
+      "title": "Cobalt Currents",
+      "description": "Ride the waves with this striking bouquet of ocean-hued hydrangeas, deep blue delphiniums, and sculptural sea holly, evoking the tranquil majesty of the open sea.",
+      "price": 89,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120790.png",
+      "alt": "Cobalt Currents bouquet"
+    },
+    {
+      "id": 3,
+      "title": "Luminous Chartreuse",
+      "description": "Brilliant chartreuse cymbidium orchids and gossamer hydrangea shine boldly among a sea of deep purple anemones and midnight lisianthus. An electrifying bouquet full of energy and aristocratic allure.",
+      "price": 102,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120792.png",
+      "alt": "Luminous Chartreuse bouquet"
+    },
+    {
+      "id": 4,
+      "title": "Woodland Whimsy",
+      "description": "A magical bouquet featuring petite white spray roses, dainty waxflowers, vibrant moss, and enchanting faux mushrooms, evoking the enchanting realm of woodland sprites and secret forest clearings.",
+      "price": 78,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120793.png",
+      "alt": "Woodland Whimsy bouquet"
+    },
+    {
+      "id": 5,
+      "title": "Enchanted Lunar Landscape",
+      "description": "A celestial bouquet of snowy white peonies, silvery brunia, pale blue hydrangea, and shimmering eucalyptus creates a dreamscape worthy of moonlit nights and enchanted wishes.",
+      "price": 98,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120794.png",
+      "alt": "Enchanted Lunar Landscape bouquet"
+    },
+    {
+      "id": 6,
+      "title": "Monochrome Minimalism",
+      "description": "A striking interplay of crisp white orchids, black calla lilies, and sculptural anthurium, this bouquet transforms the essence of modern art into a bold, graphic floral statement.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120795.png",
+      "alt": "Monochrome Minimalism bouquet"
+    },
+    {
+      "id": 7,
+      "title": "Japandi Serenity",
+      "description": "A tranquil composition of creamy magnolia blooms and artfully arranged linear branches, accented with soft greenery. This bouquet embodies minimalism and calm, inspired by the refined Japandi aesthetic.",
+      "price": 88,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120796.png",
+      "alt": "Japandi Serenity bouquet"
+    },
+    {
+      "id": 8,
+      "title": "Futurist Chrome",
+      "description": "A strikingly modern arrangement featuring gleaming metallic-silver leaves, electric blue anthuriums, and sculptural white orchids—evoking avant-garde elegance and the bold allure of tomorrow.",
+      "price": 110,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120797.png",
+      "alt": "Futurist Chrome bouquet"
+    },
+    {
+      "id": 9,
+      "title": "Golden Hour",
+      "description": "Glowing amber roses and sunlit wheat spikes mingle with soft golden ranunculus and textured grasses, capturing the warmth and glow of magic hour in an elegant, sun-kissed bouquet.",
+      "price": 79,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120798.png",
+      "alt": "Golden Hour bouquet"
+    },
+    {
+      "id": 10,
+      "title": "Quiet Nostalgia",
+      "description": "Soft, faded pink garden roses and blush ranunculus mingle with airy sprays of lacy Queen Anne's lace, creating a tender bouquet that gently evokes wistful, vintage memories.",
+      "price": 78,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120799.png",
+      "alt": "Quiet Nostalgia bouquet"
+    },
+    {
+      "id": 11,
+      "title": "Sun-Drenched Desert",
+      "description": "Capture the spirit of arid elegance with ochre garden roses, sculptural succulents, and textured cacti accents, evoking endless sunbeams and the rugged beauty of the desert in bloom.",
+      "price": 89,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120800.png",
+      "alt": "Sun-Drenched Desert bouquet"
+    },
+    {
+      "id": 12,
+      "title": "Chinoiserie Dreams",
+      "description": "A graceful fusion of delicate cherry blossoms, sapphire-hued hydrangeas, and porcelain blue delphiniums evokes the timeless elegance of hand-painted chinoiserie. A bouquet brimming with artful sophistication.",
+      "price": 98,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120801.png",
+      "alt": "Chinoiserie Dreams bouquet"
+    },
+    {
+      "id": 13,
+      "title": "Renaissance Tapestry",
+      "description": "An opulent bouquet of velvety red garden roses, burgundy peonies, and golden-hued ranunculus, elegantly wrapped with gold brocade ribbon—evoking the grandeur and artistry of a Renaissance masterpiece.",
+      "price": 110,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120804.png",
+      "alt": "Renaissance Tapestry bouquet"
+    },
+    {
+      "id": 14,
+      "title": "Winter Solstice",
+      "description": "A luminous bouquet of icy blue hydrangeas, white roses, and silvery frosted pine, evoking the hushed elegance and shimmering calm of the longest winter night.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120805.png",
+      "alt": "Winter Solstice bouquet"
+    },
+    {
+      "id": 15,
+      "title": "Industrial Chic",
+      "description": "Bold steel-gray succulents meet striking rust-orange tulips, accented with silver brunia and eucalyptus. This arrangement is a modern fusion of urban edge and warm, sophisticated elegance.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120806.png",
+      "alt": "Industrial Chic bouquet"
+    },
+    {
+      "id": 16,
+      "title": "Unbridled Romance",
+      "description": "Lush blush garden roses entwine with fragrant, trailing jasmine in a bouquet that radiates passion and softness. Perfectly crafted to evoke a sense of timeless, heartfelt love.",
+      "price": 98,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120807.png",
+      "alt": "Unbridled Romance bouquet"
+    },
+    {
+      "id": 17,
+      "title": "Rustic Farmhouse",
+      "description": "Golden sunflowers, airy bluebells, and textured wheat stems are hand-tied with natural burlap ribbon, capturing the warmth and charm of a sunlit country morning.",
+      "price": 58,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120808.png",
+      "alt": "Rustic Farmhouse bouquet"
+    },
+    {
+      "id": 18,
+      "title": "Moonlit Reverie",
+      "description": "A luminous bouquet of creamy night-blooming cereus, pale moonflowers, and silver dollar eucalyptus leaves. Evoking the tranquil poetry of midnight gardens under a gentle lunar glow.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120811.png",
+      "alt": "Moonlit Reverie bouquet"
+    },
+    {
+      "id": 19,
+      "title": "Midsummer Night's Whimsy",
+      "description": "A luminous cascade of pastel sweet peas entwined with shimmering, glow-in-the-dark foliage creates this enchanting bouquet—evoking the magical allure of a starlit midsummer evening in full bloom.",
+      "price": 98,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120812.png",
+      "alt": "Midsummer Night's Whimsy bouquet"
+    },
+    {
+      "id": 20,
+      "title": "Enchanted Forest Floor",
+      "description": "A whimsical bouquet evoking woodland magic, featuring velvety moss, lush ferns, delicate hellebores, tiny woodland blooms, and lifelike foraged mushrooms for a touch of enchantment.",
+      "price": 78,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120813.png",
+      "alt": "Enchanted Forest Floor bouquet"
+    },
+    {
+      "id": 21,
+      "title": "Espresso Elegance",
+      "description": "Rich, deep brown magnolias blend seamlessly with creamy lisianthus, creating a bouquet that exudes refined warmth and sophistication—perfect for those with a taste for understated luxury.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120814.png",
+      "alt": "Espresso Elegance bouquet"
+    },
+    {
+      "id": 22,
+      "title": "Blueberry Sunrise",
+      "description": "A radiant blend of indigo hydrangeas and peach roses, accented with silvery eucalyptus. This bouquet evokes the tranquil beauty of morning light spilling over a summer berry orchard.",
+      "price": 88,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120815.png",
+      "alt": "Blueberry Sunrise bouquet"
+    },
+    {
+      "id": 23,
+      "title": "Granite & Emerald",
+      "description": "A striking fusion of silvery granite-hued roses, lush emerald foliage, and vibrant chartreuse orchids. This modern bouquet evokes the elegance of stone and the vitality of a jeweled forest.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120818.png",
+      "alt": "Granite & Emerald bouquet"
+    },
+    {
+      "id": 24,
+      "title": "Spring Awakening",
+      "description": "A fresh, elegant bouquet of pale green hellebores and pristine white tulips, evoking the first gentle blush of spring. Perfect for celebrating renewal and new beginnings.",
+      "price": 78,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120819.png",
+      "alt": "Spring Awakening bouquet"
+    },
+    {
+      "id": 25,
+      "title": "Cubist Abstraction",
+      "description": "A striking bouquet of boldly structured tulips, calla lilies, and billy balls in contrasting blocks of primary colors, artfully arranged with angular foliage to echo cubist geometry. Modern artistry, reimagined in flowers.",
+      "price": 105,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120820.png",
+      "alt": "Cubist Abstraction bouquet"
+    },
+    {
+      "id": 26,
+      "title": "Dappled Sunlight",
+      "description": "Brighten any space with lemon-hued snapdragons, crisp fresh mint, and accents of white lisianthus. This radiant bouquet evokes sunlit mornings and breezy garden strolls.",
+      "price": 68,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120821.png",
+      "alt": "Dappled Sunlight bouquet"
+    },
+    {
+      "id": 27,
+      "title": "Enchanted Library",
+      "description": "Step inside literary magic with fragrant French lavender, creamy white garden roses, and delicate parchment-hued lisianthus. Evocative of antique book pages and timeless stories unfolding in fragrant air.",
+      "price": 89,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120822.png",
+      "alt": "Enchanted Library bouquet"
+    },
+    {
+      "id": 28,
+      "title": "Aztec Sun",
+      "description": "Radiant marigolds, sunlit goldenrod, and artistically painted palm leaves evoke the vibrant spirit of ancient suns. This striking bouquet blazes with warmth, energy, and bold cultural flair.",
+      "price": 82,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120825.png",
+      "alt": "Aztec Sun bouquet"
+    },
+    {
+      "id": 29,
+      "title": "Orchard Bounty",
+      "description": "A lush celebration of spring, this bouquet features fragrant apple blossoms, blossoming branches with ripe crabapples, and fresh greenery—evoking a sunlit orchard at harvest. An artisanal feast for the senses.",
+      "price": 82,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120826.png",
+      "alt": "Orchard Bounty bouquet"
+    },
+    {
+      "id": 30,
+      "title": "Pure Tranquility",
+      "description": "Experience calm with this all-white bouquet of lush hydrangeas, snowy roses, and elegant lisianthus, accented by sculptural ferns and velvety silver foliage. A serene blend of texture and purity.",
+      "price": 88,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120827.png",
+      "alt": "Pure Tranquility bouquet"
+    },
+    {
+      "id": 31,
+      "title": "Desert Bloom",
+      "description": "An evocative bouquet of blooming cactus flowers, sandy-hued protea, and textured desert greenery. Inspired by arid landscapes, it radiates warmth, rugged elegance, and golden sunset light.",
+      "price": 78,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120828.png",
+      "alt": "Desert Bloom bouquet"
+    },
+    {
+      "id": 32,
+      "title": "Garden Graffiti",
+      "description": "A bold, avant-garde bouquet featuring vibrant spray-painted roses, neon-tipped chrysanthemums, and electric blue delphiniums—fusing lush garden blooms with edgy street-art flair for a true urban statement.",
+      "price": 89,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120829.png",
+      "alt": "Garden Graffiti bouquet"
+    },
+    {
+      "id": 33,
+      "title": "Opalescent Mist",
+      "description": "A luminous bouquet of soft pink peonies, blush lisianthus, and silver-green eucalyptus enveloped in iridescent dusty miller. Like morning dew catching the first rays of light, it's pure enchantment.",
+      "price": 98,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120832.png",
+      "alt": "Opalescent Mist bouquet"
+    },
+    {
+      "id": 34,
+      "title": "Winter Orchard",
+      "description": "Evoking the stark beauty of an orchard at first frost, this bouquet features sculptural bare branches, frosted white ranunculus, and clusters of icy red rosehips for a striking seasonal statement.",
+      "price": 79,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120833.png",
+      "alt": "Winter Orchard bouquet"
+    },
+    {
+      "id": 35,
+      "title": "Spring in Kyoto",
+      "description": "Experience the tranquility of cherry blossom season with airy plum blossoms and cascading violet wisteria, artfully arranged with fragrant sweet peas and soft greenery—an ode to the poetic Japanese spring.",
+      "price": 98,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120834.png",
+      "alt": "Spring in Kyoto bouquet"
+    },
+    {
+      "id": 36,
+      "title": "Jungle Fever",
+      "description": "Bold monstera leaves, neon green anthuriums, exotic orchids, and sculptural pincushion proteas burst with untamed energy—an electrifying bouquet inspired by the wild, playful spirit of the tropics.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120835.png",
+      "alt": "Jungle Fever bouquet"
+    },
+    {
+      "id": 37,
+      "title": "Antique Gold Nouveau",
+      "description": "Echoing opulence and vintage charm, this bouquet weaves golden-hued roses, muted olive ranunculus, and sculptural ferns into an art nouveau-inspired masterpiece—elegant, sophisticated, and truly timeless.",
+      "price": 105,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120836.png",
+      "alt": "Antique Gold Nouveau bouquet"
+    },
+    {
+      "id": 38,
+      "title": "Desert Mirage",
+      "description": "A striking bouquet inspired by the desert's allure, blending sandy-hued roses, golden protea, spiky blue thistle, and sculptural succulents. Earthy, exotic, and undeniably sophisticated.",
+      "price": 88,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120839.png",
+      "alt": "Desert Mirage bouquet"
+    },
+    {
+      "id": 39,
+      "title": "Minimal Strokes",
+      "description": "A striking bouquet of pure white calla lilies arranged with intentional negative space and minimal greenery, evoking modern artistry through simplicity and form. Understated, elegant, and unforgettable.",
+      "price": 70,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120840.png",
+      "alt": "Minimal Strokes bouquet"
+    },
+    {
+      "id": 40,
+      "title": "Blushing Dawn",
+      "description": "Awaken the senses with blushing peach tulips entwined with silvery dusty miller, evoking the tranquil glow of first light. A soft, elegant expression of new beginnings.",
+      "price": 72,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120841.png",
+      "alt": "Blushing Dawn bouquet"
+    },
+    {
+      "id": 41,
+      "title": "Baroque Fantasy",
+      "description": "Sumptuous gilded roses and lavish peonies intertwine with golden foliage and rich greenery, evoking the opulence of a Baroque masterpiece. An extravagant bouquet for those who desire pure luxury.",
+      "price": 115,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120842.png",
+      "alt": "Baroque Fantasy bouquet"
+    },
+    {
+      "id": 42,
+      "title": "Serene Zen",
+      "description": "Tranquility unfolds with white orchids nestled among smooth Zen stones and lush green moss. This harmonious arrangement evokes meditative calm and pure, natural beauty.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120843.png",
+      "alt": "Serene Zen bouquet"
+    },
+    {
+      "id": 43,
+      "title": "Nostalgic Sepia",
+      "description": "Whispering of sunlit afternoons, this vintage-inspired bouquet blends dried grasses, antique hydrangea, and preserved lunaria in warm sepia tones—a timeless embrace of elegance and memory.",
+      "price": 72,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120846.png",
+      "alt": "Nostalgic Sepia bouquet"
+    },
+    {
+      "id": 44,
+      "title": "Peach Sorbet",
+      "description": "A luscious swirl of apricot ranunculus, peach garden roses, and creamy lisianthus, evoking the soft, sunlit sweetness of a summertime sorbet. Exquisitely fresh and utterly irresistible.",
+      "price": 72,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120847.png",
+      "alt": "Peach Sorbet bouquet"
+    },
+    {
+      "id": 45,
+      "title": "Crimson Passion",
+      "description": "Sumptuous crimson roses entwined with dramatic, shadowy foliage—midnight ruscus and deep plum smokebush—create a bouquet that pulses with romance and intensity. Perfect for bold declarations of love.",
+      "price": 98,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120848.png",
+      "alt": "Crimson Passion bouquet"
+    },
+    {
+      "id": 46,
+      "title": "Bohemian Rhapsody",
+      "description": "Bursting with golden sunflowers, feathery astilbe, and wild greenery, this free-spirited bouquet channels carefree bohemia and radiant summer days with every lush, textured stem.",
+      "price": 78,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120849.png",
+      "alt": "Bohemian Rhapsody bouquet"
+    },
+    {
+      "id": 47,
+      "title": "Earthy Neutrals",
+      "description": "An artful composition of brown orchids, clay-hued roses, and textural seed pods, this bouquet celebrates nature's subtle palette with refined elegance and organic beauty.",
+      "price": 72,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120852.png",
+      "alt": "Earthy Neutrals bouquet"
+    },
+    {
+      "id": 48,
+      "title": "Dragonfly Wings",
+      "description": "Glide into enchantment with shimmering iridescent orchids, pastel lisianthus, and whisper-light airy ferns—this bouquet evokes the delicate luminescence and graceful movement of a dragonfly in flight.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120853.png",
+      "alt": "Dragonfly Wings bouquet"
+    },
+    {
+      "id": 49,
+      "title": "Electric Citrus",
+      "description": "A burst of energy in floral form—vivid orange ranunculus, lime-green zinnias, and citrus-hued tulips collide in this zesty, modern arrangement that dazzles and delights the senses.",
+      "price": 78,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120854.png",
+      "alt": "Electric Citrus bouquet"
+    },
+    {
+      "id": 50,
+      "title": "Mist-Kissed Morning",
+      "description": "Awaken to a tranquil bouquet of misty pale bluebells nestled among soft, pillowy moss and silvery foliage. This arrangement evokes the freshness and serenity of dawn in an enchanted woodland.",
+      "price": 78,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120855.png",
+      "alt": "Mist-Kissed Morning bouquet"
+    },
+    {
+      "id": 51,
+      "title": "Tropical Monsoon",
+      "description": "An exotic cascade of emerald palm fronds, vibrant red ginger flowers, and lush rainforest foliage. This bouquet evokes the refreshing essence of rain-soaked tropics in every stem.",
+      "price": 98,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120856.png",
+      "alt": "Tropical Monsoon bouquet"
+    },
+    {
+      "id": 52,
+      "title": "Rainforest Canopy",
+      "description": "An exuberant display of vivid birds-of-paradise, emerald monstera leaves, and lush trailing philodendron vines. This striking bouquet evokes the vibrant energy and lushness of the tropical rainforest.",
+      "price": 110,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120859.png",
+      "alt": "Rainforest Canopy bouquet"
+    },
+    {
+      "id": 53,
+      "title": "Lavender Haze",
+      "description": "A misty dream of monochrome purples, featuring lush lavender, cloud-like astilbe, velvety lisianthus, and delicate scabiosa. A soothing, ethereal bouquet for lovers of all things violet.",
+      "price": 88,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120860.png",
+      "alt": "Lavender Haze bouquet"
+    },
+    {
+      "id": 54,
+      "title": "Blizzard Garden",
+      "description": "A crisp, modern bouquet of frilled white peonies, snowy lisianthus, and airy powder-blue ferns, evoking a frosted garden blanketed in gentle winter light.",
+      "price": 88,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120861.png",
+      "alt": "Blizzard Garden bouquet"
+    },
+    {
+      "id": 55,
+      "title": "Cosmic Nebula",
+      "description": "A mesmerizing bouquet swirling with wild violets, midnight blue delphiniums, indigo lisianthus, and accents of starry thistles—capturing the enigmatic beauty of a distant, celestial nebula.",
+      "price": 105,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120862.png",
+      "alt": "Cosmic Nebula bouquet"
+    },
+    {
+      "id": 56,
+      "title": "Misty Mountain Glen",
+      "description": "This serene bouquet evokes a fog-kissed woodland, blending lush evergreens, velvety white hellebores, and sprigs of silvery moss for an atmosphere of tranquil alpine beauty.",
+      "price": 88,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120863.png",
+      "alt": "Misty Mountain Glen bouquet"
+    },
+    {
+      "id": 57,
+      "title": "Zesty Mojito",
+      "description": "A refreshing burst of lime-hued alstroemeria and vibrant hydrangea playfully intertwined with fragrant mint sprigs, evoking the crisp, invigorating spirit of a summer mojito.",
+      "price": 68,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120866.png",
+      "alt": "Zesty Mojito bouquet"
+    },
+    {
+      "id": 58,
+      "title": "Modern Origami",
+      "description": "A striking, architectural bouquet featuring crisp white calla lilies, sculpted roses, and bold angular folds of glossy aspidistra leaves—an avant-garde floral display inspired by the art of origami.",
+      "price": 105,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120867.png",
+      "alt": "Modern Origami bouquet"
+    },
+    {
+      "id": 59,
+      "title": "Vintage Botanica",
+      "description": "Inspired by classic botanical prints, this refined bouquet blends teal thistle, sage eucalyptus, silvery brunia, and soft white garden roses—evoking timeless elegance with a painterly botanical palette.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120868.png",
+      "alt": "Vintage Botanica bouquet"
+    },
+    {
+      "id": 60,
+      "title": "Violet Storm",
+      "description": "A moody, captivating bouquet of inky purple irises swirled with crisp white lisianthus and silver eucalyptus, evoking the energy and contrast of a gathering tempest.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120869.png",
+      "alt": "Violet Storm bouquet"
+    },
+    {
+      "id": 61,
+      "title": "Reclaimed Romance",
+      "description": "Timeless beauty emerges in this bouquet of blush garden roses, dried lavender, preserved hydrangea, and sprigs of dusty herbs, delicately wrapped in antique lace for a wistful, vintage allure.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120870.png",
+      "alt": "Reclaimed Romance bouquet"
+    },
+    {
+      "id": 62,
+      "title": "Lunar Eclipse",
+      "description": "A striking interplay of charcoal-hued scabiosa and ghostly white lilies, shadowed with midnight delphinium and dusky foliage—a bouquet evoking cosmic mystery and nocturnal elegance.",
+      "price": 98,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120873.png",
+      "alt": "Lunar Eclipse bouquet"
+    },
+    {
+      "id": 63,
+      "title": "Victorian Secret Garden",
+      "description": "Step into a hidden world with lush garden roses in soft mauves, lilac sweet peas, and heirloom greenery. This bouquet evokes the romance of a forgotten, flower-filled sanctuary.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120874.png",
+      "alt": "Victorian Secret Garden bouquet"
+    },
+    {
+      "id": 64,
+      "title": "Starry Night",
+      "description": "A celestial-inspired bouquet featuring deep navy delphiniums, velvety indigo anemones, and playful yellow craspedia orbs. This arrangement evokes the magic of a starlit sky.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120875.png",
+      "alt": "Starry Night bouquet"
+    },
+    {
+      "id": 65,
+      "title": "Monochrome Crimson",
+      "description": "A sultry fusion of scarlet lilies, crimson berries, and deep, dark foliage evokes a mood of unapologetic elegance. This monochrome bouquet is dramatic, modern, and utterly captivating.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120876.png",
+      "alt": "Monochrome Crimson bouquet"
+    },
+    {
+      "id": 66,
+      "title": "Pagoda Tranquility",
+      "description": "Serene branches of pale cherry blossoms mingle with elegant stems of slender bamboo, evoking the calm of an oriental garden retreat. A graceful tribute to peace and natural beauty.",
+      "price": 88,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120879.png",
+      "alt": "Pagoda Tranquility bouquet"
+    },
+    {
+      "id": 67,
+      "title": "Emerald City",
+      "description": "A striking composition of vivid green viburnum, sculpted aspidistra leaves, and bold tulips in jewel tones. Modern structure and lush color evoke the vibrance of an urban oasis.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120880.png",
+      "alt": "Emerald City bouquet"
+    },
+    {
+      "id": 68,
+      "title": "Shabby Chic Nostalgia",
+      "description": "Soft blush garden roses and feathery astilbe rest in a charming vintage blue jar, accented with lacy baby's breath and silvery eucalyptus for a romantic, wistful touch of bygone elegance.",
+      "price": 72,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120881.png",
+      "alt": "Shabby Chic Nostalgia bouquet"
+    },
+    {
+      "id": 69,
+      "title": "Enchanted Dusk",
+      "description": "A moody bouquet blending twilight-hued lisianthus, amethyst roses, velvety clematis, and plumes of smoke bush. Lush purples and silvery foliage evoke the magic of evening's embrace.",
+      "price": 89,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120882.png",
+      "alt": "Enchanted Dusk bouquet"
+    },
+    {
+      "id": 70,
+      "title": "Nordic Frost",
+      "description": "A wintry composition of aromatic pine, icy white hydrangea tinged with blue, and pale blush roses evokes the tranquil elegance of a Scandinavian landscape after fresh snowfall.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120883.png",
+      "alt": "Nordic Frost bouquet"
+    },
+    {
+      "id": 71,
+      "title": "Wuthering Winds",
+      "description": "Evoking untamed moors, this windswept bouquet features wild grasses, feathery pampas, silver-green eucalyptus, and windswept white lisianthus, beautifully arranged for a sense of organic, natural movement.",
+      "price": 72,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120886.png",
+      "alt": "Wuthering Winds bouquet"
+    },
+    {
+      "id": 72,
+      "title": "Espresso Noir",
+      "description": "A sultry arrangement blending deep chocolate cosmos, velvety scabiosa, and lush emerald greens. Moody, artful, and decadent—perfect for lovers of bold florals and refined drama.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120887.png",
+      "alt": "Espresso Noir bouquet"
+    },
+    {
+      "id": 73,
+      "title": "Flamingo Parade",
+      "description": "A jubilant burst of pink featuring exuberant flamingo-hued peonies, fluffy astilbe, feathery pampas grass, and playful carnations. An irresistibly soft, vibrant bouquet that celebrates whimsy and bold color.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120888.png",
+      "alt": "Flamingo Parade bouquet"
+    },
+    {
+      "id": 74,
+      "title": "Café au Lait",
+      "description": "Indulge in sophistication with luscious café au lait dahlias and caramel-hued ranunculus, artfully accented by soft blush roses and feathery greenery. The essence of creamy elegance in every stem.",
+      "price": 89,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120889.png",
+      "alt": "Café au Lait bouquet"
+    },
+    {
+      "id": 75,
+      "title": "Chromatic Chaos",
+      "description": "A jubilant explosion of multicolored wildflowers—delphinium, poppies, daisies, and asters—boldly styled in unruly abundance. This maximalist bouquet is pure, joyful vibrancy designed to wow.",
+      "price": 92,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120892.png",
+      "alt": "Chromatic Chaos bouquet"
+    },
+    {
+      "id": 76,
+      "title": "Hushed Morning Dew",
+      "description": "A tranquil bouquet featuring petite white lisianthus buds, snowdrops, and soft green hellebores, evoking the freshness and serenity of dawn kissed by gentle dew.",
+      "price": 68,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120893.png",
+      "alt": "Hushed Morning Dew bouquet"
+    },
+    {
+      "id": 77,
+      "title": "Forest Nymph",
+      "description": "Whispering woodland magic, this bouquet entwines hidden violets, feathered ferns, and lush spirals of emerald moss, evoking the secretive beauty of an enchanted glade.",
+      "price": 88,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120894.png",
+      "alt": "Forest Nymph bouquet"
+    },
+    {
+      "id": 78,
+      "title": "Scented Memoir",
+      "description": "Delicate pale anemones mingle with fragrant sprigs of rosemary, thyme, and lavender in this poetic bouquet—evoking nostalgia and the gentle elegance of an herb-scented garden.",
+      "price": 73,
+      "image": "https://ftp.goit.study/img/flowers/68498236a1003120895.png",
+      "alt": "Scented Memoir bouquet"
+    }
+  ]
+}
