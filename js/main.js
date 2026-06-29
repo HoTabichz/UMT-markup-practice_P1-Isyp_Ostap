@@ -1,4 +1,4 @@
-const BASE_URL = './js/db.json';
+const BASE_URL = './db.json';
 
 // ========================
 // PRODUCTS SLIDER
