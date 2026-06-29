@@ -168,8 +168,8 @@ async function fetchProducts() {
   const list = document.querySelector('.products-list');
   showLoader(list);
   try {
-    const response = await fetchWithRetry(`${BASE_URL}/products`);
-    allProducts = response.data;
+    const response = await fetchWithRetry(BASE_URL);
+    allProducts = response.data.products;
     renderProducts(allProducts);
   } catch (error) {
     showError(list, 'Failed to load products. Please try again.');
@@ -180,8 +180,8 @@ async function fetchBouquets() {
   const list = document.querySelector('.bouquets-list');
   showLoader(list);
   try {
-    const response = await fetchWithRetry(`${BASE_URL}/bouquets`);
-    allBouquets = response.data;
+    const response = await fetchWithRetry(BASE_URL);
+    allBouquets = response.data.bouquets;
     renderBouquets(allBouquets);
   } catch (error) {
     showError(list, 'Failed to load bouquets. Please try again.');
