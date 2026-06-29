@@ -1,4 +1,4 @@
-const BASE_URL = 'umt-markup-practicep1-isypostap-production.up.railway.app';
+const BASE_URL = 'const BASE_URL = 'https://umt-markup-practicep1-isypostap-production.up.railway.app';';
 
 // ========================
 // PRODUCTS SLIDER
