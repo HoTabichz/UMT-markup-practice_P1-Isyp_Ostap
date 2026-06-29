@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'flora-production-4bee.up.railway.app';
 
 // ========================
 // PRODUCTS SLIDER
