@@ -1,4 +1,4 @@
-const BASE_URL = 'https://umt-markup-practicep1-isypostap-production.up.railway.app';
+const BASE_URL = './js/db.json';
 
 // ========================
 // PRODUCTS SLIDER
@@ -51,7 +51,6 @@ function updateDots() {
   const dotsContainer = document.querySelector('.products-dots');
   dotsContainer.innerHTML = '';
 
-  // Завжди рівно 6 крапок
   for (let i = 0; i < 6; i++) {
     const btn = document.createElement('button');
     btn.type = 'button';
@@ -64,13 +63,11 @@ function updateDots() {
     dotsContainer.appendChild(btn);
   }
 
-  // Disabled стан для стрілок
   const [prevBtn, nextBtn] = document.querySelectorAll('.products-btn');
   prevBtn.disabled = currentSlide === 0;
   nextBtn.disabled = currentSlide === total - 1;
 }
 
-// Стрілки
 document.querySelector('.products-controls').addEventListener('click', (e) => {
   const btn = e.target.closest('.products-btn');
   if (!btn) return;
@@ -129,7 +126,6 @@ document.querySelector('.bouquets-btn').addEventListener('click', () => {
 // ========================
 // LOADER / ERROR
 // ========================
-
 function showLoader(container) {
   container.innerHTML = `
     <li class="loader-wrapper">
@@ -148,12 +144,9 @@ function showError(container, message = 'Something went wrong. Please try again.
 }
 
 // ========================
-// FETCH
+// FETCH — читаємо db.json напряму
 // ========================
-
-// Допоміжна функція: повторює запит кілька разів з невеликою затримкою,
-// якщо сервер ще не встиг піднятися
-async function fetchWithRetry(url, retries = 5, delay = 500) {
+async function fetchWithRetry(url, retries = 3, delay = 500) {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
       return await axios.get(url);
@@ -168,8 +161,8 @@ async function fetchProducts() {
   const list = document.querySelector('.products-list');
   showLoader(list);
   try {
-    const response = await fetchWithRetry(`${BASE_URL}/products`);
-    allProducts = response.data;
+    const response = await fetchWithRetry(BASE_URL);
+    allProducts = response.data.products;
     renderProducts(allProducts);
   } catch (error) {
     showError(list, 'Failed to load products. Please try again.');
@@ -180,8 +173,8 @@ async function fetchBouquets() {
   const list = document.querySelector('.bouquets-list');
   showLoader(list);
   try {
-    const response = await fetchWithRetry(`${BASE_URL}/bouquets`);
-    allBouquets = response.data;
+    const response = await fetchWithRetry(BASE_URL);
+    allBouquets = response.data.bouquets;
     renderBouquets(allBouquets);
   } catch (error) {
     showError(list, 'Failed to load bouquets. Please try again.');
@@ -191,7 +184,6 @@ async function fetchBouquets() {
 // ========================
 // BIND CARD → PRODUCT MODAL
 // ========================
-
 function bindProductCards() {
   document.querySelectorAll('.js-open-product').forEach(card => {
     card.replaceWith(card.cloneNode(true));
@@ -211,7 +203,7 @@ function bindProductCards() {
 }
 
 // ========================
-// SWIPE (touch) для products
+// SWIPE
 // ========================
 let touchStartX = 0;
 let touchEndX = 0;
@@ -224,21 +216,19 @@ document.querySelector('.products-list').addEventListener('touchend', (e) => {
   touchEndX = e.changedTouches[0].screenX;
   const diff = touchStartX - touchEndX;
 
-  if (Math.abs(diff) < 50) return; // ігноруємо маленькі рухи
+  if (Math.abs(diff) < 50) return;
 
   const total = getTotalSlides();
   if (diff > 0) {
-    // свайп вліво → наступний
     if (currentSlide < total - 1) currentSlide++;
   } else {
-    // свайп вправо → попередній
     if (currentSlide > 0) currentSlide--;
   }
   renderProducts(allProducts);
 }, { passive: true });
 
 // ========================
-// RESIZE — перерендер при зміні розміру
+// RESIZE
 // ========================
 let resizeTimer;
 window.addEventListener('resize', () => {
@@ -252,12 +242,12 @@ window.addEventListener('resize', () => {
 // ========================
 // INIT
 // ========================
-
 async function initData() {
   await Promise.all([fetchProducts(), fetchBouquets()]);
 }
 
 initData();
+
 // ========================
 // SCROLL TO TOP
 // ========================
