@@ -2,7 +2,7 @@ const isLocal = window.location.hostname === 'localhost' || window.location.host
 const BASE_URL = isLocal ? 'http://localhost:3000' : './js/db.json';
 
 // ========================
-// STATE — один об'єкт
+// STATE 
 // ========================
 const state = {
   products: {
@@ -98,15 +98,32 @@ document.querySelector('.products-controls').addEventListener('click', (e) => {
 });
 
 // ========================
-// BOUQUETS — SORT + PAGINATION
+// BOUQUETS — FILTER + PAGINATION
 // ========================
-function renderBouquets(bouquets, append = false) {
+let allBouquets = [];
+
+function getFilteredBouquets() {
+  if (state.bouquets.filter === 'under80') return allBouquets.filter(b => b.price < 80);
+  if (state.bouquets.filter === '80to100') return allBouquets.filter(b => b.price >= 80 && b.price <= 100);
+  if (state.bouquets.filter === 'over100') return allBouquets.filter(b => b.price > 100);
+  return allBouquets;
+}
+
+function renderBouquets(append = false) {
   const list = document.querySelector('.bouquets-list');
   const showMoreBtn = document.querySelector('.bouquets-btn');
 
+  const filtered = isLocal
+    ? [] 
+    : getFilteredBouquets();
+
+  const items = isLocal
+    ? (append ? window._lastBouquets : window._lastBouquets)
+    : filtered.slice(0, state.bouquets.page * state.bouquets.limit);
+
   if (!append) list.innerHTML = '';
 
-  if (bouquets.length === 0 && !append) {
+  if (items.length === 0 && !append) {
     list.insertAdjacentHTML('beforeend', `
       <li class="error-message" style="list-style:none; grid-column:1/-1">
         <p>No bouquets found.</p>
@@ -116,7 +133,7 @@ function renderBouquets(bouquets, append = false) {
     return;
   }
 
-  const html = bouquets.map(item => `
+  const html = items.map(item => `
     <li class="bouquet-card js-open-product"
         data-image="${item.image}"
         data-alt="${item.alt}"
@@ -135,9 +152,12 @@ function renderBouquets(bouquets, append = false) {
 
   list.insertAdjacentHTML('beforeend', html);
 
-  const loaded = state.bouquets.page * state.bouquets.limit;
-  showMoreBtn.style.display = loaded >= state.bouquets.total ? 'none' : 'block';
+  const total = isLocal ? state.bouquets.total : filtered.length;
+  const loaded = isLocal
+    ? state.bouquets.page * state.bouquets.limit
+    : state.bouquets.page * state.bouquets.limit;
 
+  showMoreBtn.style.display = loaded >= total ? 'none' : 'block';
   bindProductCards();
 }
 
@@ -150,7 +170,6 @@ document.querySelector('.bouquets-filter').addEventListener('click', (e) => {
   const btn = e.target.closest('.filter-btn');
   if (!btn) return;
 
-  // Скидаємо сторінку при зміні сортування
   state.bouquets.page = 1;
   state.bouquets.filter = btn.dataset.filter;
 
@@ -177,7 +196,7 @@ function showError(container, message = 'Something went wrong. Please try again.
 }
 
 // ========================
-// FETCH — axios + async/await + _page/_limit
+// FETCH — axios + async/await
 // ========================
 async function fetchWithRetry(url, retries = 3, delay = 500) {
   for (let attempt = 1; attempt <= retries; attempt++) {
@@ -194,10 +213,16 @@ async function fetchProducts() {
   const list = document.querySelector('.products-list');
   showLoader(list);
   try {
-    const response = await fetchWithRetry(
-      `${BASE_URL}/products?_page=${state.products.page}&_per_page=${state.products.limit}`
-    );
-    allProducts = Array.isArray(response.data) ? response.data : response.data.data;
+    let data;
+    if (isLocal) {
+      const url = `${BASE_URL}/products?_page=${state.products.page}&_per_page=${state.products.limit}`;
+      const response = await fetchWithRetry(url);
+      data = Array.isArray(response.data) ? response.data : response.data.data;
+    } else {
+      const response = await fetchWithRetry(BASE_URL);
+      data = response.data.products;
+    }
+    allProducts = data;
     renderProducts(allProducts);
   } catch (error) {
     showError(list, 'Failed to load products. Please try again.');
@@ -209,20 +234,25 @@ async function fetchBouquets(append = false) {
   if (!append) showLoader(list);
 
   try {
-    let url = `${BASE_URL}/bouquets?_page=${state.bouquets.page}&_per_page=${state.bouquets.limit}`;
+    if (isLocal) {
+      let url = `${BASE_URL}/bouquets?_page=${state.bouquets.page}&_per_page=${state.bouquets.limit}`;
+      if (state.bouquets.filter === 'under80') url += '&price_lte=79';
+      if (state.bouquets.filter === '80to100') url += '&price_gte=80&price_lte=100';
+      if (state.bouquets.filter === 'over100') url += '&price_gte=101';
 
-    if (state.bouquets.filter === 'under80') url += '&price_lte=79';
-    if (state.bouquets.filter === '80to100') url += '&price_gte=80&price_lte=100';
-    if (state.bouquets.filter === 'over100') url += '&price_gte=101';
-
-    const response = await fetchWithRetry(url);
-
-    // json-server v1 повертає total в response.data.items
-    const data = Array.isArray(response.data) ? response.data : response.data.data;
-    const total = response.data.items || data.length;
-    state.bouquets.total = total;
-
-    renderBouquets(data, append);
+      const response = await fetchWithRetry(url);
+      const data = Array.isArray(response.data) ? response.data : response.data.data;
+      const total = response.data.items || data.length;
+      state.bouquets.total = total;
+      window._lastBouquets = data;
+      renderBouquets(append);
+    } else {
+      // GitHub Pages — статичний db.json
+      const response = await fetchWithRetry(BASE_URL);
+      allBouquets = response.data.bouquets;
+      state.bouquets.total = allBouquets.length;
+      renderBouquets(append);
+    }
   } catch (error) {
     if (!append) showError(list, 'Failed to load bouquets. Please try again.');
   }
