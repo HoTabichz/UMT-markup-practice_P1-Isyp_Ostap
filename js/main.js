@@ -1,5 +1,4 @@
-const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-const BASE_URL = isLocal ? 'http://localhost:3000' : './js/db.json';
+const BASE_URL = './js/db.json';
 
 // ========================
 // STATE
@@ -181,15 +180,8 @@ async function fetchProducts() {
   const list = document.querySelector('.products-list');
   showLoader(list);
   try {
-    let data;
-    if (isLocal) {
-      const url = `${BASE_URL}/products?_page=${state.products.page}&_per_page=${state.products.limit}`;
-      const response = await fetchWithRetry(url);
-      data = Array.isArray(response.data) ? response.data : response.data.data;
-    } else {
-      const response = await fetchWithRetry(BASE_URL);
-      data = response.data.products;
-    }
+    const response = await fetchWithRetry(BASE_URL);
+    const data = response.data.products;
     allProducts = data;
     renderProducts(allProducts);
   } catch (error) {
@@ -201,15 +193,8 @@ async function fetchBouquets() {
   const list = document.querySelector('.bouquets-list');
   showLoader(list);
   try {
-    let data;
-    if (isLocal) {
-      const url = `${BASE_URL}/bouquets?_page=1&_per_page=999`;
-      const response = await fetchWithRetry(url);
-      data = Array.isArray(response.data) ? response.data : response.data.data;
-    } else {
-      const response = await fetchWithRetry(BASE_URL);
-      data = response.data.bouquets;
-    }
+    const response = await fetchWithRetry(BASE_URL);
+    const data = response.data.bouquets;
     allBouquets = data;
     state.bouquets.total = data.length;
     renderBouquets();
