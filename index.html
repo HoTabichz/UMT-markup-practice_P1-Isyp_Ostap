@@ -35,7 +35,7 @@
     <div class="container">
         <nav class="nav">
             <a href="./index.html" class="logo">
-                <img src="./images/logof.png" alt="Flora logo" width="120" />
+                <img src="./images/logof.png" srcset="./images/logof.png 1x, ./images/logof.png 2x" alt="Flora logo" width="120" />
             </a>
 
             <ul class="nav-list">
@@ -63,6 +63,7 @@
         <img
                 class="hero-bg-image"
                 src="./images/hero.png"
+                srcset="./images/hero.png 1x, ./images/hero.png 2x"
                 alt="Beautiful bouquet of pink and white flowers"
                 width="1440"
         />
@@ -99,6 +100,7 @@
                 <img
                         class="about-image"
                         src="./images/2.png"
+                        srcset="./images/2.png 1x, ./images/2.png 2x"
                         alt="Florist working with flowers"
                         width="536"
                         data-aos="fade-left"
@@ -147,6 +149,12 @@
             <p class="bouquets-section-text" data-aos="fade-up" data-aos-delay="100">
                 Explore our stunning selection of fresh flower bouquets.
             </p>
+            <div class="bouquets-filter">
+                <button type="button" class="filter-btn active" data-filter="all">All</button>
+                <button type="button" class="filter-btn" data-filter="under80">Under $80</button>
+                <button type="button" class="filter-btn" data-filter="80to100">$80–$100</button>
+                <button type="button" class="filter-btn" data-filter="over100">Over $100</button>
+            </div>
             <ul class="bouquets-list">
                 <!-- dynamic via axios / main.js -->
             </ul>
@@ -210,7 +218,11 @@
                     </li>
                 </ul>
             </div>
-            <img class="contact-image" src="./images/florist.png" alt="Florist holding bouquet in flower shop" width="1280" />
+            <img class="contact-image"
+                 src="./images/florist.png"
+                 srcset="./images/florist.png 1x, ./images/florist.png 2x"
+                 alt="Florist holding bouquet in flower shop"
+                 width="1280" />
         </div>
     </section>
 </main>
@@ -220,6 +232,24 @@
         <a href="./index.html" class="footer-logo">
             <img src="./images/logoff.png" alt="Flora logo" class="footer-logo-img" width="120" />
         </a>
+        <form id="subscribeForm" class="subscribe-form" novalidate>
+            <label class="subscribe-label" for="subscribeEmail">Subscribe to our newsletter</label>
+            <div class="subscribe-wrap">
+                <input type="email" id="subscribeEmail" name="email" class="subscribe-input" placeholder="your@email.com" required />
+                <button type="submit" class="subscribe-btn">Subscribe</button>
+            </div>
+            <div class="subscribe-checkbox-wrap">
+                <label class="modal-checkbox-label">
+                    <input type="checkbox" name="subscribe-agree" class="modal-checkbox-input visually-hidden" required />
+                    <span class="modal-checkbox-custom">
+                        <svg class="modal-checkbox-icon" width="16" height="16" aria-hidden="true">
+                            <use href="./images/icons.svg#icon-check"></use>
+                        </svg>
+                    </span>
+                    <span class="modal-checkbox-text">I agree to the <a href="#" class="modal-checkbox-link">Privacy Policy</a></span>
+                </label>
+            </div>
+        </form>
         <div class="footer-nav" aria-label="Footer navigation">
             <ul class="footer-nav-list">
                 <li><a class="footer-nav-link" href="#about">About Us</a></li>
@@ -259,7 +289,7 @@
     <div class="mobile-menu-container">
         <div class="mobile-menu-header">
             <a href="./index.html" class="mobile-menu-logo">
-                <img src="./images/logof.png" alt="Flora logo" width="120" />
+                <img src="./images/logof.png" srcset="./images/logof.png 1x, ./images/logof.png 2x" alt="Flora logo" width="120" />
             </a>
             <button type="button" class="mobile-menu-close-btn" aria-label="Close mobile menu">
                 <svg width="24" height="24" aria-hidden="true">
@@ -326,6 +356,17 @@
             <div class="modal-field">
                 <label class="modal-label" for="orderMessage">Message</label>
                 <textarea class="modal-textarea modal-textarea--simple" id="orderMessage" name="message" placeholder="Type your message..."></textarea>
+            </div>
+            <div class="modal-field modal-field--checkbox">
+                <label class="modal-checkbox-label">
+                    <input type="checkbox" name="agree" class="modal-checkbox-input visually-hidden" required />
+                    <span class="modal-checkbox-custom">
+                        <svg class="modal-checkbox-icon" width="16" height="16" aria-hidden="true">
+                            <use href="./images/icons.svg#icon-check"></use>
+                        </svg>
+                    </span>
+                    <span class="modal-checkbox-text">I agree to the <a href="#" class="modal-checkbox-link">Privacy Policy</a></span>
+                </label>
             </div>
             <button type="submit" class="modal-submit">Go to Checkout</button>
         </form>
