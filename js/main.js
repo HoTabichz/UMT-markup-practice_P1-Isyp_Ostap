@@ -2,21 +2,15 @@ const isLocal = window.location.hostname === 'localhost' || window.location.host
 const BASE_URL = isLocal ? 'http://localhost:3000' : './js/db.json';
 
 // ========================
-// STATE 
+// STATE
 // ========================
 const state = {
-  products: {
-    page: 1,
-    limit: 18,
-    currentSlide: 0,
-  },
-  bouquets: {
-    page: 1,
-    limit: 8,
-    filter: 'all',
-    total: 0,
-  },
+  products: { page: 1, limit: 18, currentSlide: 0 },
+  bouquets: { page: 1, limit: 8, filter: 'all', total: 0 },
 };
+
+let allProducts = [];
+let allBouquets = [];
 
 // ========================
 // PRODUCTS SLIDER
@@ -24,16 +18,11 @@ const state = {
 const PRODUCTS_PER_PAGE_DESKTOP = 3;
 const PRODUCTS_PER_PAGE_TABLET = 2;
 const PRODUCTS_PER_PAGE_MOBILE = 1;
-let allProducts = [];
 
 function getProductsPerPage() {
   if (window.innerWidth < 768) return PRODUCTS_PER_PAGE_MOBILE;
   if (window.innerWidth < 1440) return PRODUCTS_PER_PAGE_TABLET;
   return PRODUCTS_PER_PAGE_DESKTOP;
-}
-
-function getTotalSlides() {
-  return 6;
 }
 
 function renderProducts(products) {
@@ -66,10 +55,8 @@ function renderProducts(products) {
 }
 
 function updateDots() {
-  const total = getTotalSlides();
   const dotsContainer = document.querySelector('.products-dots');
   dotsContainer.innerHTML = '';
-
   for (let i = 0; i < 6; i++) {
     const btn = document.createElement('button');
     btn.type = 'button';
@@ -81,27 +68,23 @@ function updateDots() {
     });
     dotsContainer.appendChild(btn);
   }
-
   const [prevBtn, nextBtn] = document.querySelectorAll('.products-btn');
   prevBtn.disabled = state.products.currentSlide === 0;
-  nextBtn.disabled = state.products.currentSlide === total - 1;
+  nextBtn.disabled = state.products.currentSlide === 5;
 }
 
 document.querySelector('.products-controls').addEventListener('click', (e) => {
   const btn = e.target.closest('.products-btn');
   if (!btn) return;
-  const total = getTotalSlides();
   const isPrev = btn.getAttribute('aria-label') === 'Previous';
   if (isPrev) { if (state.products.currentSlide > 0) state.products.currentSlide--; }
-  else { if (state.products.currentSlide < total - 1) state.products.currentSlide++; }
+  else { if (state.products.currentSlide < 5) state.products.currentSlide++; }
   renderProducts(allProducts);
 });
 
 // ========================
 // BOUQUETS — FILTER + PAGINATION
 // ========================
-let allBouquets = [];
-
 function getFilteredBouquets() {
   if (state.bouquets.filter === 'under80') return allBouquets.filter(b => b.price < 80);
   if (state.bouquets.filter === '80to100') return allBouquets.filter(b => b.price >= 80 && b.price <= 100);
@@ -109,21 +92,15 @@ function getFilteredBouquets() {
   return allBouquets;
 }
 
-function renderBouquets(append = false) {
+function renderBouquets() {
   const list = document.querySelector('.bouquets-list');
   const showMoreBtn = document.querySelector('.bouquets-btn');
+  const filtered = getFilteredBouquets();
+  const visible = filtered.slice(0, state.bouquets.page * state.bouquets.limit);
 
-  const filtered = isLocal
-    ? [] 
-    : getFilteredBouquets();
+  list.innerHTML = '';
 
-  const items = isLocal
-    ? (append ? window._lastBouquets : window._lastBouquets)
-    : filtered.slice(0, state.bouquets.page * state.bouquets.limit);
-
-  if (!append) list.innerHTML = '';
-
-  if (items.length === 0 && !append) {
+  if (visible.length === 0) {
     list.insertAdjacentHTML('beforeend', `
       <li class="error-message" style="list-style:none; grid-column:1/-1">
         <p>No bouquets found.</p>
@@ -133,7 +110,7 @@ function renderBouquets(append = false) {
     return;
   }
 
-  const html = items.map(item => `
+  const html = visible.map(item => `
     <li class="bouquet-card js-open-product"
         data-image="${item.image}"
         data-alt="${item.alt}"
@@ -151,32 +128,23 @@ function renderBouquets(append = false) {
   `).join('');
 
   list.insertAdjacentHTML('beforeend', html);
-
-  const total = isLocal ? state.bouquets.total : filtered.length;
-  const loaded = isLocal
-    ? state.bouquets.page * state.bouquets.limit
-    : state.bouquets.page * state.bouquets.limit;
-
-  showMoreBtn.style.display = loaded >= total ? 'none' : 'block';
+  showMoreBtn.style.display = visible.length >= filtered.length ? 'none' : 'block';
   bindProductCards();
 }
 
-document.querySelector('.bouquets-btn').addEventListener('click', async () => {
+document.querySelector('.bouquets-btn').addEventListener('click', () => {
   state.bouquets.page += 1;
-  await fetchBouquets(true);
+  renderBouquets();
 });
 
 document.querySelector('.bouquets-filter').addEventListener('click', (e) => {
   const btn = e.target.closest('.filter-btn');
   if (!btn) return;
-
   state.bouquets.page = 1;
   state.bouquets.filter = btn.dataset.filter;
-
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-
-  fetchBouquets(false);
+  renderBouquets();
 });
 
 // ========================
@@ -229,32 +197,24 @@ async function fetchProducts() {
   }
 }
 
-async function fetchBouquets(append = false) {
+async function fetchBouquets() {
   const list = document.querySelector('.bouquets-list');
-  if (!append) showLoader(list);
-
+  showLoader(list);
   try {
+    let data;
     if (isLocal) {
-      let url = `${BASE_URL}/bouquets?_page=${state.bouquets.page}&_per_page=${state.bouquets.limit}`;
-      if (state.bouquets.filter === 'under80') url += '&price_lte=79';
-      if (state.bouquets.filter === '80to100') url += '&price_gte=80&price_lte=100';
-      if (state.bouquets.filter === 'over100') url += '&price_gte=101';
-
+      const url = `${BASE_URL}/bouquets?_page=1&_per_page=999`;
       const response = await fetchWithRetry(url);
-      const data = Array.isArray(response.data) ? response.data : response.data.data;
-      const total = response.data.items || data.length;
-      state.bouquets.total = total;
-      window._lastBouquets = data;
-      renderBouquets(append);
+      data = Array.isArray(response.data) ? response.data : response.data.data;
     } else {
-      // GitHub Pages — статичний db.json
       const response = await fetchWithRetry(BASE_URL);
-      allBouquets = response.data.bouquets;
-      state.bouquets.total = allBouquets.length;
-      renderBouquets(append);
+      data = response.data.bouquets;
     }
+    allBouquets = data;
+    state.bouquets.total = data.length;
+    renderBouquets();
   } catch (error) {
-    if (!append) showError(list, 'Failed to load bouquets. Please try again.');
+    showError(list, 'Failed to load bouquets. Please try again.');
   }
 }
 
@@ -292,8 +252,7 @@ document.querySelector('.products-list').addEventListener('touchend', (e) => {
   touchEndX = e.changedTouches[0].screenX;
   const diff = touchStartX - touchEndX;
   if (Math.abs(diff) < 50) return;
-  const total = getTotalSlides();
-  if (diff > 0) { if (state.products.currentSlide < total - 1) state.products.currentSlide++; }
+  if (diff > 0) { if (state.products.currentSlide < 5) state.products.currentSlide++; }
   else { if (state.products.currentSlide > 0) state.products.currentSlide--; }
   renderProducts(allProducts);
 }, { passive: true });
@@ -314,7 +273,7 @@ window.addEventListener('resize', () => {
 // INIT
 // ========================
 async function initData() {
-  await Promise.all([fetchProducts(), fetchBouquets(false)]);
+  await Promise.all([fetchProducts(), fetchBouquets()]);
 }
 
 initData();
