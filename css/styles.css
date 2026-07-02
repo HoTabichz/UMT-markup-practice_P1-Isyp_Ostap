@@ -1,4 +1,3 @@
-
 /* ========================
    CSS VARIABLES
 ======================== */
@@ -808,15 +807,15 @@ p {
 .modal-textarea { height: 120px; resize: none; padding-top: 15px; align-self: stretch; }
 .modal-field--checkbox { margin-top: 4px; }
 .modal-checkbox-label { display: flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; }
-.modal-checkbox-custom { flex-shrink: 0; width: 20px; height: 20px; border: 1.5px solid var(--color-border); border-radius: 4px; display: flex; align-items: center; justify-content: center; background-color: transparent; transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); }
+.modal-checkbox-custom { flex-shrink: 0; width: 20px; height: 20px; border: 1.5px solid var(--color-dark); border-radius: 4px; display: flex; align-items: center; justify-content: center; background-color: transparent; transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); }
 .modal-checkbox-icon { color: transparent; transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); }
-.modal-checkbox-input:checked + .modal-checkbox-custom { background-color: var(--color-brand); border-color: var(--color-brand); }
+.modal-checkbox-input:checked + .modal-checkbox-custom { background-color: var(--color-dark); border-color: var(--color-dark); }
 .modal-checkbox-input:checked + .modal-checkbox-custom .modal-checkbox-icon { color: #fff; }
 .modal-checkbox-input:focus-visible + .modal-checkbox-custom { outline: 2px solid var(--color-brand); outline-offset: 2px; }
 .modal-checkbox-label:hover .modal-checkbox-custom { border-color: var(--color-brand); }
 .modal-checkbox-text { font-size: 13px; color: var(--color-text-light); line-height: 1.5; }
-.modal-checkbox-link { color: var(--color-brand); text-decoration: underline; transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); }
-.modal-checkbox-link:hover { color: var(--color-brand-dark); }
+.modal-checkbox-link { color: var(--color-dark); text-decoration: underline; transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); }
+.modal-checkbox-link:hover { color: var(--color-text-light); }
 .modal-submit { margin-top: 8px; padding: 10px 24px; background: linear-gradient(90deg, #E8E81C 0%, #42ED13 100%); color: var(--color-dark); font-size: 15px; font-weight: 600; border-radius: 100px; border: none; cursor: pointer; font-family: var(--font-main); transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); width: 100%; }
 .modal-submit:hover, .modal-submit:focus { opacity: 0.88; outline: none; }
 .product-card.js-open-product, .bouquet-card.js-open-product { cursor: pointer; }
@@ -956,3 +955,154 @@ p {
 .modal-input--simple { padding-left: 16px; }
 .modal-textarea--simple { padding-left: 16px; }
 .modal-submit { display: block; width: auto; margin: 8px auto 0; padding: 12px 40px; }
+/* ========================
+   БЛОК 1 — RETINA HERO BG
+======================== */
+@media (min-resolution: 2dppx) {
+  .hero {
+    background-image: url('../images/hero.png');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* ========================
+   БЛОК 4 — FILTER BUTTONS
+======================== */
+.bouquets-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-main);
+  color: var(--color-dark);
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+.filter-btn.active {
+  background: linear-gradient(90deg, #E8E81C 0%, #42ED13 100%);
+  border-color: transparent;
+  color: var(--color-dark);
+}
+
+@media (min-width: 768px) {
+  .bouquets-filter { gap: 12px; margin-bottom: 36px; }
+  .filter-btn { padding: 10px 24px; font-size: 15px; }
+}
+
+/* ========================
+   БЛОК 2 — SUBSCRIBE FORM
+======================== */
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.subscribe-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.subscribe-wrap {
+  display: flex;
+  gap: 8px;
+}
+
+.subscribe-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1.5px solid rgba(0,0,0,0.2);
+  border-radius: 100px;
+  font-size: 14px;
+  font-family: var(--font-main);
+  color: var(--color-dark);
+  background: transparent;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-input::placeholder { color: rgba(0,0,0,0.4); }
+.subscribe-input:focus { border-color: var(--color-dark); }
+
+.subscribe-btn {
+  padding: 12px 20px;
+  background: var(--color-dark);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-main);
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-btn:hover { opacity: 0.75; }
+
+.subscribe-checkbox-wrap { margin-top: 4px; }
+
+@media (min-width: 1440px) {
+  .subscribe-form { max-width: 360px; }
+}
+
+/* ========================
+   FOOTER SUBSCRIBE ROW
+======================== */
+.footer-subscribe {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 24px 0;
+}
+
+.footer-subscribe .subscribe-form {
+  max-width: 480px;
+}
+
+/* Subscribe wrap — column on mobile/tablet, row on desktop */
+.subscribe-wrap {
+  flex-direction: column;
+}
+
+.subscribe-btn {
+  width: 100%;
+}
+
+.subscribe-checkbox-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1440px) {
+  .subscribe-wrap {
+    flex-direction: row;
+  }
+
+  .subscribe-btn {
+    width: auto;
+  }
+
+  .subscribe-checkbox-wrap {
+    justify-content: flex-start;
+  }
+}
