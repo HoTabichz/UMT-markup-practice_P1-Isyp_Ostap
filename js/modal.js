@@ -42,7 +42,7 @@ function closeOrderModal() {
   document.body.style.overflow = '';
 }
 
-// "Buy now" → закрити деталі, відкрити замовлення
+// "Buy now"
 productModalBuy.addEventListener('click', () => {
   closeProductModal();
   setTimeout(openOrderModal, 200);
@@ -61,7 +61,7 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Форма замовлення
+// ORDERFORM
 const orderForm = document.getElementById('orderForm');
 
 function validateField(field) {
@@ -223,7 +223,7 @@ function closeMobileMenu() {
 menuOpenBtn.addEventListener('click', openMobileMenu);
 menuCloseBtn.addEventListener('click', closeMobileMenu);
 
-// Закрити при кліку на посилання
+// CLOSE AFTER
 document.querySelectorAll('.mobile-menu-link').forEach(link => {
   link.addEventListener('click', closeMobileMenu);
 });
