@@ -1,4 +1,5 @@
-const BASE_URL = 'http://localhost:3000';
+const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+const BASE_URL = isLocal ? 'http://localhost:3000' : './js/db.json';
 
 // ========================
 // STATE — один об'єкт
